@@ -29,6 +29,5 @@ export default defineConfig({
       remarkSoundcloudEmbed,
     ],
   },
-  site: "https://nathanalam.github.io",
-  base: "/nathanalam",
+  site: "https://nathanalam.github.io/nathanalam",
 });

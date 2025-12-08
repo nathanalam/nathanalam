@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Alam - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #f0f0f0;
+            --text-color: #333;
+            --accent-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: white;
+            padding: 50px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: var(--primary-color);
+        }
+
+        /* Section Styles */
+        section {
+            background-color: white;
+            margin-top: 30px;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--secondary-color);
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        /* Education & Experience Styles */
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .experience-item h3, .education-item h3 {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .experience-item h4, .education-item h4 {
+            font-size: 1.1em;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            font-size: 1em;
+        }
+
+        /* Contact Styles */
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--accent-color);
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .hero {
+                padding: 30px 0;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <section class="hero">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczNEMV5eQ5_ujSLlSvYpo2DFvskWK8WkwpSx2F1umvaj5HO18vrYCnS4rrku7UHu6PCn-EWxEV2k09Gw0PlPQ8pidpmCdVS1gT0as4Rq3KunMtmE8zC6eEtWC3OVjMuK5WphBV5d-oAK7E_Nu0n_tvABWw=w641-h721-s-no-gm" alt="Nathan Alam">
+            <h1>Nathan Alam</h1>
+            <p>Software Engineer | MBA Candidate</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>A brief introduction about yourself can go here.  Highlight your key skills and experiences.  This section can be expanded as needed.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>HARVARD BUSINESS SCHOOL & HARVARD SCHOOL OF ENGINEERING & APPLIED SCIENCES</h3>
+                <h4>Candidate for Master of Business Administration, May 2027</h4>
+            </div>
+            <div class="education-item">
+                <h3>PRINCETON UNIVERSITY</h3>
+                <h4>B.S. Chemical and Biological Engineering</h4>
+                <p>GPA: 3.92 Minors: Computer Science, Health Policy Summa Cum Laude (Highest Honors), Tau Beta Pi; Phi Beta Kappa; Sigma Xi</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>SCALE AI</h3>
+                <h4>Software Engineer</h4>
+                <p>Created a custom AI agent platform with a chat interface fine tuned for national security and deployed on classified networks for 500+ customers, winning contracts for >$10mm Developed workflows to enable image analysis, geospatial interactions, wargaming, and multi-modal inference fine tuned for defense use cases, opening up a new product line for $100mm</p>
+            </div>
+            <div class="experience-item">
+                <h3>AMAZON</h3>
+                <h4>Software Development Engineer II</h4>
+                <p>Designed high performance networking drivers in Rust for interfacing proprietary over air RF signals from low earth orbit satellites to level 2 Ethernet protocols for first 1000 consumer prototypes Created automated CI/CD pipelines with end to end integration tests, developed React and Typescript UI for a cleared data management system transmitting terabytes of data high to low daily</p>
+            </div>
+             <div class="experience-item">
+                <h3>SPACE EXPLORATION TECHNOLOGIES</h3>
+                <h4>Automation & Controls Engineer</h4>
+                <p>Directed daily launchpad operations as a ground controller to test out piping, electrical wiring, and machine learning augmented data reporting of ground support equipment to double pad turnover rate. Coordinated electrical panel builds for Starship's launch mount, enabling first Starship launch from Boca Chica Revamped core calibration equipment across SLC4E in preparation for weekly launches of hundreds of Starlink satellites from Vandenberg</p>
+            </div>
+            <div class="experience-item">
+                <h3>GINKGO BIOWORKS</h3>
+                <h4>Software Engineering Intern</h4>
+                <p>Constructed a new cloud infrastructure solution where code generated by scientists would automatically deploy to AWS lambda functions to store experimental results from lab executions Ran in-silico validation for one team and helped bring online COVID testing for Concentric</p>
+            </div>
+            <div class="experience-item">
+                <h3>CAPITAL ONE</h3>
+                <h4>Software Engineering Intern</h4>
+                <p>Built a tool to allow development teams to forecast future time series data using deep neural networks as part of the AWS Sagemaker machine learning platform Bootstrapped a server and client to access data and presented tool for >200 members of company using relevant software</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <ul class="contact-info">
+                <li><i class="fas fa-map-marker-alt"></i>9922 Evenstar Ln, Fairfax Station, VA 22039</li>
+                <li><i class="fas fa-envelope"></i><a href="mailto:nathanalam99@gmail.com">nathanalam99@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i><a href="tel:571-451-5103">571-451-5103</a></li>
+                <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/nathan-alam/">LinkedIn Profile</a></li>
+                <li><i class="fab fa-github"></i><a href="https://github.com/nathanalam">GitHub Profile</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nathan Alam. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple fade-in animation on scroll
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target); // Stop observing after animating
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger when 20% of the section is visible
+        });
+
+        sections.forEach(section => {
+            section.style.opacity = 0; // Initially hide sections
+            section.style.transform = 'translateY(20px)'; // Move sections down
+            section.style.animation = 'fadeIn 0.75s ease-out forwards'; // Define animation
+            section.style.animationPlayState = 'paused'; // Pause animation initially
+            observer.observe(section); // Start observing
+        });
+    </script>
+
+</body>
+</html>

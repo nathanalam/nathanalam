@@ -3,272 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathan Alam - Personal Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Nathan Alam — Software Engineer &amp; MBA Candidate</title>
+    <meta name="description" content="Nathan Alam - Software Engineer and MBA Candidate at Harvard Business School. Previously at Scale AI, Amazon, and SpaceX.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #f0f0f0;
-            --text-color: #333;
-            --accent-color: #2c3e50;
-            --background-dark: #1a1a1a;
+            --bg: #0d0d0b;
+            --fg: #edede9;
+            --primary: #9a9690;
+            --muted: #78776f;
+            --secondary: #b0afa6;
+            --border: rgba(255, 255, 255, 0.07);
+            --hover-bg: rgba(255, 255, 255, 0.025);
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-dark);
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--fg);
             line-height: 1.6;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            width: 80%;
-            max-width: 1200px;
+        .wrapper {
+            max-width: 672px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 80px 24px 120px;
         }
 
-        /* Hero Section */
-        .hero {
-            background-color: white;
-            padding: 50px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.5s ease-out forwards;
+        @media (min-width: 768px) {
+            .wrapper {
+                padding: 128px 24px;
+            }
         }
 
-        .hero img {
-            width: 150px;
-            height: 150px;
+        /* ── Header ─────────────────────────────── */
+        .header {
+            margin-bottom: 80px;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar {
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
+            flex-shrink: 0;
+            outline: 2px solid rgba(154, 150, 144, 0.3);
+            outline-offset: 2px;
         }
 
-        .hero h1 {
-            font-size: 2.5em;
-            color: var(--accent-color);
-            margin-bottom: 10px;
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            color: var(--fg);
         }
 
-        .hero p {
-            font-size: 1.2em;
-            color: var(--primary-color);
+        @media (min-width: 768px) {
+            h1 { font-size: 3rem; }
         }
 
-        /* Section Styles */
+        .subtitle {
+            margin-top: 4px;
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        /* ── Sections ────────────────────────────── */
         section {
-            background-color: white;
-            margin-top: 30px;
-            padding: 30px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-
-        section:nth-child(even) {
-            background-color: var(--secondary-color);
+            margin-bottom: 64px;
         }
 
         section h2 {
-            font-size: 2em;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 24px;
         }
 
-        /* Education & Experience Styles */
-        .experience-item, .education-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+        /* ── Education ───────────────────────────── */
+        .edu-item {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 16px;
+            margin-bottom: 16px;
         }
 
-        .experience-item:last-child, .education-item:last-child {
+        .edu-item:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
 
-        .experience-item h3, .education-item h3 {
-            font-size: 1.5em;
-            color: var(--primary-color);
-            margin-bottom: 5px;
+        .edu-item .school {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--fg);
         }
 
-        .experience-item h4, .education-item h4 {
-            font-size: 1.1em;
-            color: var(--text-color);
-            margin-bottom: 10px;
+        .edu-item .degree {
+            font-size: 0.875rem;
+            color: var(--muted);
+            margin-top: 2px;
         }
 
-        .experience-item p {
-            font-size: 1em;
+        /* ── Experience ──────────────────────────── */
+        .exp-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            border-bottom: 1px solid var(--border);
+            padding: 20px 16px;
+            margin: 0 -16px;
+            border-radius: 4px;
+            transition: background-color 0.15s ease;
         }
 
-        /* Contact Styles */
-        .contact-info {
-            list-style: none;
-            padding: 0;
+        .exp-item:last-child {
+            border-bottom: none;
         }
 
-        .contact-info li {
-            margin-bottom: 10px;
+        .exp-item:hover {
+            background-color: var(--hover-bg);
         }
 
-        .contact-info i {
-            margin-right: 10px;
-            color: var(--primary-color);
+        .exp-item .company {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--fg);
         }
 
-        /* Footer Styles */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--accent-color);
-            color: white;
-            margin-top: 30px;
+        .exp-item .role {
+            font-size: 0.875rem;
+            color: var(--muted);
+            margin-top: 2px;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .exp-item .desc {
+            font-size: 0.875rem;
+            color: var(--secondary);
+            margin-top: 4px;
+            line-height: 1.5;
         }
 
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 10px;
-            }
+        /* ── Contact ─────────────────────────────── */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.875rem;
+        }
 
-            .hero {
-                padding: 30px 0;
-            }
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--fg);
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
 
-            .hero h1 {
-                font-size: 2em;
-            }
+        .contact-links a:hover {
+            color: var(--primary);
+        }
 
-            section {
-                padding: 20px;
-            }
-
-            section h2 {
-                font-size: 1.5em;
-            }
+        .contact-links a svg {
+            width: 12px;
+            height: 12px;
         }
     </style>
 </head>
 <body>
+    <div class="wrapper">
 
-    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-inner">
+                <img class="avatar" src="./me.jpg" alt="Nathan Alam">
+                <div>
+                    <h1>Nathan Alam</h1>
+                    <p class="subtitle">Software Engineer · MBA Candidate</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="hero">
-            <img src="https://lh3.googleusercontent.com/pw/AP1GczNEMV5eQ5_ujSLlSvYpo2DFvskWK8WkwpSx2F1umvaj5HO18vrYCnS4rrku7UHu6PCn-EWxEV2k09Gw0PlPQ8pidpmCdVS1gT0as4Rq3KunMtmE8zC6eEtWC3OVjMuK5WphBV5d-oAK7E_Nu0n_tvABWw=w641-h721-s-no-gm" alt="Nathan Alam">
-            <h1>Nathan Alam</h1>
-            <p>Software Engineer | MBA Candidate</p>
-        </section>
-
-        <section id="education">
+        <!-- Education -->
+        <section>
             <h2>Education</h2>
-            <div class="education-item">
-                <h3>HARVARD BUSINESS SCHOOL & HARVARD SCHOOL OF ENGINEERING & APPLIED SCIENCES</h3>
-                <h4>Candidate for Master of Business Administration, May 2027</h4>
+            <div class="edu-item">
+                <p class="school">Harvard Business School &amp; Harvard SEAS</p>
+                <p class="degree">MS/MBA, 2027</p>
             </div>
-            <div class="education-item">
-                <h3>PRINCETON UNIVERSITY</h3>
-                <h4>B.S. Chemical and Biological Engineering</h4>
-                <p>GPA: 3.92 Minors: Computer Science, Health Policy Summa Cum Laude (Highest Honors)</p>
-                <p><strong>Award Societies:</strong> Tau Beta Pi; Phi Beta Kappa; Sigma Xi</p>
+            <div class="edu-item">
+                <p class="school">Princeton University</p>
+                <p class="degree">B.S. Chemical &amp; Biological Engineering · Summa Cum Laude</p>
             </div>
         </section>
 
-        <section id="experience">
+        <!-- Experience -->
+        <section>
             <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>SCALE AI</h3>
-                <h4>Software Engineer</h4>
-                <p>Created a custom AI agent platform with a chat interface fine tuned for national security and deployed on classified networks for 500+ customers, winning contracts for >$10mm Developed workflows to enable image analysis, geospatial interactions, wargaming, and multi-modal inference fine tuned for defense use cases, opening up a new product line for $100mm</p>
+            <div class="exp-item">
+                <div>
+                    <p class="company">Scale AI</p>
+                    <p class="role">Software Engineer</p>
+                    <p class="desc">AI agent platform for national security on classified networks</p>
+                </div>
             </div>
-            <div class="experience-item">
-                <h3>AMAZON</h3>
-                <h4>Software Development Engineer II</h4>
-                <p>Designed high performance networking drivers in Rust for interfacing proprietary over air RF signals from low earth orbit satellites to level 2 Ethernet protocols for first 1000 consumer prototypes Created automated CI/CD pipelines with end to end integration tests, developed React and Typescript UI for a cleared data management system transmitting terabytes of data high to low daily</p>
+            <div class="exp-item">
+                <div>
+                    <p class="company">Amazon</p>
+                    <p class="role">SDE II</p>
+                    <p class="desc">Networking drivers in Rust for LEO satellite communications</p>
+                </div>
             </div>
-             <div class="experience-item">
-                <h3>SPACE EXPLORATION TECHNOLOGIES</h3>
-                <h4>Automation & Controls Engineer</h4>
-                <p>Directed daily launchpad operations as a ground controller to test out piping, electrical wiring, and machine learning augmented data reporting of ground support equipment to double pad turnover rate. Coordinated electrical panel builds for Starship's launch mount, enabling first Starship launch from Boca Chica Revamped core calibration equipment across SLC4E in preparation for weekly launches of hundreds of Starlink satellites from Vandenberg</p>
+            <div class="exp-item">
+                <div>
+                    <p class="company">SpaceX</p>
+                    <p class="role">Automation &amp; Controls</p>
+                    <p class="desc">Launch operations &amp; pad turnover optimization at Boca Chica</p>
+                </div>
             </div>
-            <div class="experience-item">
-                <h3>GINKGO BIOWORKS</h3>
-                <h4>Software Engineering Intern</h4>
-                <p>Constructed a new cloud infrastructure solution where code generated by scientists would automatically deploy to AWS lambda functions to store experimental results from lab executions Ran in-silico validation for one team and helped bring online COVID testing for Concentric</p>
+            <div class="exp-item">
+                <div>
+                    <p class="company">Ginkgo Bioworks</p>
+                    <p class="role">Software Engineer Intern</p>
+                    <p class="desc">Cloud infra for automated lab experiment pipelines</p>
+                </div>
             </div>
-            <div class="experience-item">
-                <h3>CAPITAL ONE</h3>
-                <h4>Software Engineering Intern</h4>
-                <p>Built a tool to allow development teams to forecast future time series data using deep neural networks as part of the AWS Sagemaker machine learning platform Bootstrapped a server and client to access data and presented tool for >200 members of company using relevant software</p>
+            <div class="exp-item">
+                <div>
+                    <p class="company">Capital One</p>
+                    <p class="role">Software Engineer Intern</p>
+                    <p class="desc">Time series forecasting with deep neural networks on AWS</p>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
+        <!-- Contact -->
+        <section>
             <h2>Contact</h2>
-            <ul class="contact-info">
-                <li><i class="fas fa-map-marker-alt"></i>9922 Evenstar Ln, Fairfax Station, VA 22039</li>
-                <li><i class="fas fa-envelope"></i><a href="mailto:nathanalam99@gmail.com">nathanalam99@gmail.com</a></li>
-                <li><i class="fas fa-phone"></i><a href="tel:571-451-5103">571-451-5103</a></li>
-                <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/nathan-alam/">LinkedIn Profile</a></li>
-                <li><i class="fab fa-github"></i><a href="https://github.com/nathanalam">GitHub Profile</a></li>
-                <li><i class="fas fa-calendar-check"></i><a href="https://calendar.app.google/Sf9aediRwnELXNrR8">Book a Meeting</a></li>
-            </ul>
+            <div class="contact-links">
+                <a href="mailto:nathanalam99@gmail.com">
+                    Email
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/nathan-alam/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+                <a href="https://github.com/nathanalam" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+                <a href="https://calendar.app.google/Sf9aediRwnELXNrR8" target="_blank" rel="noopener noreferrer">
+                    Book a Meeting
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+            </div>
         </section>
 
     </div>
-
-    <footer>
-        <p>&copy; 2024 Nathan Alam. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Simple fade-in animation on scroll
-        const sections = document.querySelectorAll('section');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                    observer.unobserve(entry.target); // Stop observing after animating
-                }
-            });
-        }, {
-            threshold: 0.2 // Trigger when 20% of the section is visible
-        });
-
-        sections.forEach(section => {
-            section.style.opacity = 0; // Initially hide sections
-            section.style.transform = 'translateY(20px)'; // Move sections down
-            section.style.animation = 'fadeIn 0.75s ease-out forwards'; // Define animation
-            section.style.animationPlayState = 'paused'; // Pause animation initially
-            observer.observe(section); // Start observing
-        });
-    </script>
-
 </body>
 </html>

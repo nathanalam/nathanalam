@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:id-preview--940645bc-5b98-4f81-b5ba-3ba8df73e350.lovable.app)",
+      "Bash(head:*)",
+      "Bash(ls:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(git:*)"
+    ]
+  }
+}

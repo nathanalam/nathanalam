@@ -5,7 +5,7 @@
 import SectionHeader from "./SectionHeader";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const ABOUT_IMG = "/me.png";
+const ABOUT_IMG = `${import.meta.env.BASE_URL}me.png`;
 
 const stats = [
   { value: "6+", label: "Years Engineering" },

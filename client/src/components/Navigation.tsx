@@ -21,6 +21,12 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Check if scrolled to bottom
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10) {
+        setActiveSection(sections[sections.length - 1].id);
+        return;
+      }
+
       const scrollY = window.scrollY + 200;
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i].id);

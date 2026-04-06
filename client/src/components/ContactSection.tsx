@@ -40,7 +40,7 @@ export default function ContactSection() {
     <section id="contact" className="py-20 md:py-24 lg:pl-24 xl:pl-28 bg-card/30">
       <div className="container">
         <SectionHeader
-          number="05"
+          number="06"
           title="Contact"
           subtitle="Let's connect"
         />

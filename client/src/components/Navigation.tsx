@@ -12,8 +12,7 @@ const sections = [
   { id: "experience", label: "Experience", number: "02" },
   { id: "education", label: "Education", number: "03" },
   { id: "skills", label: "Skills", number: "04" },
-  { id: "resume", label: "Resume", number: "05" },
-  { id: "contact", label: "Contact", number: "06" },
+  { id: "contact", label: "Contact", number: "05" },
 ];
 
 export default function Navigation() {

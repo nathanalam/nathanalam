@@ -28,7 +28,7 @@ const experiences: Experience[] = [
     id: "nuro",
     company: "Nuro",
     role: "Technical Program Manager",
-    period: "2024 — Present",
+    period: "2026 — Present",
     location: "Mountain View, CA",
     image: NURO_IMG,
     highlights: [

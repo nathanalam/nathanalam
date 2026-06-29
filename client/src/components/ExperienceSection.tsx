@@ -7,6 +7,7 @@ import { ChevronDown, ExternalLink } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
+const NURO_IMG = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Nuro_P2_test_car_%28San_Francisco%2C_July_2025%29_-4.jpg";
 const AI_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663434085805/biVnaHciSgqmctxVnfgAu7/experience-ai-EgACGtQB3oZEwpCiq5SEP2.webp";
 const SAT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663434085805/biVnaHciSgqmctxVnfgAu7/experience-satellite-e3nDP34Jsfo56yLBSBkyQu.webp";
 const SPACEX_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663434085805/biVnaHciSgqmctxVnfgAu7/experience-spacex-d9utSdUzAgA32dAXsch7sS.webp";
@@ -29,7 +30,7 @@ const experiences: Experience[] = [
     role: "Technical Program Manager",
     period: "2024 — Present",
     location: "Mountain View, CA",
-    image: "",
+    image: NURO_IMG,
     highlights: [
       "Own the program schedule for the Perception subteam, responsible for object detection and tracking, data collection and labeling for training computer vision models, occupancy and voxel detection, and sensor fusion and integration for vehicle-specific systems on Prius and Lucid partner vehicles including LIDARs, water sensors, and IMUs",
       "Coordinated the launch of the first driverless mile in the Bay Area to unlock >$100M in funding milestones from Uber and enable full L4 autonomy",

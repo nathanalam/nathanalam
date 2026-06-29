@@ -52,8 +52,8 @@ export default function ContactSection() {
           }`}
         >
           <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-            I'm always interested in discussing new opportunities in AI, defense
-            technology, and engineering leadership. Whether you're building
+            I'm always interested in discussing new opportunities in AI, deep
+            tech, and engineering leadership. Whether you're building
             something ambitious or exploring a collaboration, I'd love to hear
             from you.
           </p>

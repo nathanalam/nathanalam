@@ -22,8 +22,8 @@ const contactLinks = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/nathanalam",
-    href: "https://linkedin.com/in/nathanalam",
+    value: "linkedin.com/in/nathan-alam",
+    href: "https://linkedin.com/in/nathan-alam",
   },
   {
     icon: Calendar,

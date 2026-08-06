@@ -116,7 +116,7 @@ export default function HeroSection() {
                 <span className="hidden sm:inline">GitHub</span>
               </a>
               <a
-                href="https://linkedin.com/in/nathanalam"
+                href="https://linkedin.com/in/nathan-alam"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-amber transition-colors group"

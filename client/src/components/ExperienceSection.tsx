@@ -21,9 +21,23 @@ interface Experience {
   image: string;
   highlights: string[];
   tags: string[];
+  url?: string;
 }
 
 const experiences: Experience[] = [
+  {
+    id: "rush-automations",
+    company: "Rush Automations",
+    role: "Founder",
+    period: "Present",
+    location: "Remote",
+    image: "",
+    url: "https://rush-automations.com/",
+    highlights: [
+      "Founded a software consulting business and holding company for workplace software solutions",
+    ],
+    tags: ["Software Consulting", "Entrepreneurship", "B2B Software"],
+  },
   {
     id: "nuro",
     company: "Nuro",
@@ -139,9 +153,16 @@ function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
               <div className="absolute bottom-4 left-5 right-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-display text-xl font-bold text-foreground">
-                      {exp.company}
-                    </h3>
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-display text-xl font-bold text-foreground">
+                        {exp.company}
+                      </h3>
+                      {exp.url && (
+                        <a href={exp.url} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-amber transition-colors">
+                          <ExternalLink size={16} />
+                        </a>
+                      )}
+                    </div>
                     <p className="text-sm text-amber font-medium">{exp.role}</p>
                   </div>
                   <div className="text-right">
@@ -162,9 +183,16 @@ function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
             <div className="px-5 pt-5 pb-3">
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div>
-                  <h3 className="font-display text-lg font-bold text-foreground">
-                    {exp.company}
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-display text-lg font-bold text-foreground">
+                      {exp.company}
+                    </h3>
+                    {exp.url && (
+                      <a href={exp.url} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-amber transition-colors">
+                        <ExternalLink size={16} />
+                      </a>
+                    )}
+                  </div>
                   <p className="text-sm text-amber font-medium">{exp.role}</p>
                 </div>
                 <div className="text-right">

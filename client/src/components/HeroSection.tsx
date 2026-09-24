@@ -6,7 +6,7 @@
 import { useEffect, useState } from "react";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663434085805/biVnaHciSgqmctxVnfgAu7/hero-bg-JKEBnYN54kkBdDsXDasY4U.webp";
+const HERO_BG = `${import.meta.env.BASE_URL}images/hero-bg.webp`;
 
 const roles = [
   "Software Engineer",

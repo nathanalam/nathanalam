@@ -7,10 +7,10 @@ import { ChevronDown, ExternalLink } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const NURO_IMG = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Nuro_P2_test_car_%28San_Francisco%2C_July_2025%29_-4.jpg";
-const AI_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663434085805/biVnaHciSgqmctxVnfgAu7/experience-ai-EgACGtQB3oZEwpCiq5SEP2.webp";
-const SAT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663434085805/biVnaHciSgqmctxVnfgAu7/experience-satellite-e3nDP34Jsfo56yLBSBkyQu.webp";
-const SPACEX_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663434085805/biVnaHciSgqmctxVnfgAu7/experience-spacex-d9utSdUzAgA32dAXsch7sS.webp";
+const NURO_IMG = `${import.meta.env.BASE_URL}images/experience-nuro.jpg`;
+const AI_IMG = `${import.meta.env.BASE_URL}images/experience-ai.webp`;
+const SAT_IMG = `${import.meta.env.BASE_URL}images/experience-satellite.webp`;
+const SPACEX_IMG = `${import.meta.env.BASE_URL}images/experience-spacex.webp`;
 
 interface Experience {
   id: string;
